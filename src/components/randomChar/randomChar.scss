@@ -1,0 +1,62 @@
+@import '../../styles/variables.scss';
+
+.randomchar {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    box-shadow: 5px 5px 20px rgba($color: #000000, $alpha: 0.25);
+    &__block {
+        padding: 40px 35px;
+        display: grid;
+        grid-template-columns: 180px auto;
+        column-gap: 30px;
+    }
+    &__img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    }
+    &__info {
+        display: grid;
+        grid-template-rows: minmax(29px, auto) 90px 38px;
+        row-gap: 10px;
+        padding-top: 4px;
+    }
+    &__name {
+        text-transform: uppercase;
+        font-size: 22px;
+        line-height: 29px;
+        font-weight: 700;
+    }
+    &__descr {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &__btns {
+        a:nth-child(1) {
+            margin-right: 30px;
+        }
+    }
+    &__banner {
+        padding: 40px 35px;
+        background-color: $dark;
+        position: relative;
+        button {
+            margin-top: 13px;
+        }
+        &-img {
+            position: absolute;
+            bottom: 14px;
+            right: -37px;
+        }
+    }
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #fff;
+        &:nth-child(2) {
+            margin-top: 35px;
+        }
+    }
+}
